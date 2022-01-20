@@ -5,7 +5,7 @@ let easing = 0.5;
 
 function setup() {
   	createCanvas(1, 1);
-  	mic = new p5.AudioIn();
+
 }
 
 function draw() {
@@ -31,6 +31,7 @@ function draw() {
 }
 
 function startSound() {
+	mic = new p5.AudioIn();
 	mic.start();
 	micStarted = true;
 	console.log('sound started!')
