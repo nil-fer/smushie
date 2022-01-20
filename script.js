@@ -5,7 +5,8 @@ let easing = 1;
 
 function setup() {
   	createCanvas(1, 1);
-
+	// fixing p5 audio context issue 
+	getAudioContext().suspend();
 }
 
 function draw() {
@@ -31,10 +32,15 @@ function draw() {
 }
 
 function startSound() {
-	mic = new p5.AudioIn();
-	mic.start();
-	micStarted = true;
-	console.log('sound started!')
+	// only start audio once
+	if (!micStarted) {
+		// start audio context only now
+		userStartAudio();
+		mic = new p5.AudioIn();
+		mic.start();
+		micStarted = true;
+		console.log('sound started!')
+	}
 }
 
 document.addEventListener("click", startSound)
