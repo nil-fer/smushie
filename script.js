@@ -1,7 +1,7 @@
 let mic;
 let micStarted = false;
 let sound = 1;
-let easing = 0.5;
+let easing = 1;
 
 function setup() {
   	createCanvas(1, 1);
