@@ -27,7 +27,7 @@ body {
 		background-repeat: no-repeat;
 		background-blend-mode: multiply;
 }
-
+font-size: 25vw;
 canvas {
 	display: none;
 }
@@ -79,4 +79,26 @@ img {
 		font-variation-settings: "wght" 100;
 		filter:blur(0%);
 	}
+}
+
+@media only screen and (max-width: 480px) {
+  img {
+    width: 10vw;
+	top: 96%;
+  }
+
+
+.juice {
+	left: 5%;
+}
+
+.eye {
+	left: 15%;
+}
+
+.type {
+	font-size: 50vw;
+	text-align: center;
+	line-height: 18vh;
+}
 }
